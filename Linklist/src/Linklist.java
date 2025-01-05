@@ -76,6 +76,17 @@ public class Linklist {
 
 
     }
+    String search(int data){
+        Node temp = head;
+        while(temp!=null){
+            temp = temp.next;
+            if(temp.data == data){
+                return "found";
+            }
+
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
         Linklist ll = new Linklist();
@@ -85,14 +96,18 @@ public class Linklist {
         ll.add(6);
         ll.add(7);
         ll.add(9);
+        ll.add(23);
+       ll.addatstart(1+1);
         ll.addatstart(1);
-        ll.addatstart(1+1);
         ll.addatend(10);
+
         ll.addatend(11);
+        ll.addatend(13);
         ll.addatplace(8, 8);
-        ll.delete(3);
-        ll.deletefirst();//321  ->  123  ->    69  ->   23  ->  14  ->  232  ->  148  ->  3  ->  1  ->  4 ->  2
+        ll.delete(11);
+//        ll.deletefirst();//321  ->  123  ->    69  ->   23  ->  14  ->  232  ->  148  ->  3  ->  1  ->  4 ->  2
         ll.display();
+        System.out.println(ll.search(23));
     }
 
 }
