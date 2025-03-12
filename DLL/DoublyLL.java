@@ -83,7 +83,7 @@ public class DoublyLL {
         do{
             System.out.println(temp.data);
             temp=temp.next;
-        }while(temp.next!=null);
+        }while(temp!=null);
 
 
     }
@@ -138,8 +138,12 @@ public class DoublyLL {
 
         dll.insertatbegin(31);
         dll.insertatbegin(32);
+        //dll.print();
+       // dll.printreverse();
+       // dll.printforward();
+        dll.insertionafter(dll.head.next.next, 99);
+        dll.deletestart();
         dll.print();
-        dll.printreverse();
     }
 
 
